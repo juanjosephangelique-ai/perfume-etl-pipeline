@@ -1,3 +1,6 @@
 # Manipulation et analyse de données
 pandas
 numpy
+
+# Tests
+pytest
