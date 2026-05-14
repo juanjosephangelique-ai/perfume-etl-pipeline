@@ -1,9 +1,9 @@
 import pandas as pd
 import os
-from src.ingest import load_raw_data
+from src.ingest import ingest_data  
 
 
-def test_load_raw_data(tmp_path):
+def test_ingest_data(tmp_path):
     # 1. Créer un CSV temporaire simulant des données brutes
     file_path = tmp_path / "test_data.csv"
 
@@ -16,7 +16,7 @@ def test_load_raw_data(tmp_path):
     df_input.to_csv(file_path, index=False)
 
     # 2. Appeler la fonction d'ingestion
-    df_output = load_raw_data(str(file_path))
+    df_output = ingest_data(str(file_path))
 
     # 3. Vérifications
 
