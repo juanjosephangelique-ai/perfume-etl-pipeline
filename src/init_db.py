@@ -1,6 +1,10 @@
 import sqlite3
 
-def initialize_database(db_path="../data/perfumes.db"):
+def initialize_database(db_path="../data/processed/perfumes.db"):
+    parent_dir = os.path.dirname(db_path)
+    if parent_dir:
+        os.makedirs(parent_dir, exist_ok=True)
+
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
 

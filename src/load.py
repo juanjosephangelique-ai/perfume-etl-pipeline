@@ -10,7 +10,7 @@ def get_or_create_id(cursor, table, name):
     result = cursor.fetchone()
     return result[0] if result else None
 
-def load_data(df, db_path="../data/perfumes.db"):
+def load_data(df, db_path="../data/processed/perfumes.db"):
     with sqlite3.connect(db_path) as conn:
         conn.execute("PRAGMA foreign_keys = ON;")
         cursor = conn.cursor()
