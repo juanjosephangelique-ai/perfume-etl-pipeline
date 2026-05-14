@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environnements virtuels
+venv/
+.env/
+.venv/
+
+# Git
+.git/
+.gitignore
+
+# Tests / cache
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Data (optionnel selon ton choix)
+data/raw/
+data/processed/
+*.db
+
+# Jupyter si tu en utilises
+.ipynb_checkpoints/
