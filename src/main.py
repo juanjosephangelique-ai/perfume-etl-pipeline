@@ -15,9 +15,13 @@ def main():
 
     # 2. Ingestion
     print("Ingestion des données...")
-    os.makedirs("data", exist_ok=True)
+    os.makedirs("data/processed", exist_ok=True)
     df_raw = ingest_data("data/raw/fra_perfumes.csv")
 
+    if df_raw is None:
+        print("Pipeline arrêté : Impossible de charger les données.")
+        return
+    
     # 3. Transformation
     print("Transformation des données...")
     df_clean = clean_data(df_raw)

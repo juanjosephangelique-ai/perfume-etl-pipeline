@@ -23,4 +23,5 @@ def ingest_data(file_path):
         print("The CSV file is empty.")
 
     except Exception as e:
-        print(f"An error occurred while ingesting data: {e}")
+        print(f"CRITICAL ERROR during ingestion: {e}")
+        raise
