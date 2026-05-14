@@ -1,4 +1,5 @@
 import sqlite3
+import os
 
 def initialize_database(db_path="../data/processed/perfumes.db"):
     parent_dir = os.path.dirname(db_path)
